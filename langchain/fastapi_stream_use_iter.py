@@ -35,7 +35,7 @@ async def send_message(message: str) -> AsyncIterable[str]:
     )
 
     async def wrap_done(fn: Awaitable, event: asyncio.Event):
-        """Wrap an awaitable with a event to signal when it's done or an exception is raised."""
+        """Wrap an awaitable with an event to signal when it's done or an exception is raised."""
         try:
             await fn
         except Exception as e:
