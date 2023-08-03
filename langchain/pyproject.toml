@@ -10,7 +10,7 @@ packages = []
 python = ">=3.8.1,<3.12"
 fastapi = "^0.95.2"
 uvicorn = "^0.22.0"
-langchain = "^0.0.200"
+langchain = "^0.0.250"
 openai = "^0.27.7"
 python-dotenv = "^1.0.0"
 duckduckgo-search = "^3.8.3"
