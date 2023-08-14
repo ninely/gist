@@ -22,6 +22,7 @@ llm = LlamaCpp(
     model_path=os.environ["MODEL_PATH"],
     callback_manager=callback_manager,
     verbose=True,
+    streaming=True,
 )
 
 llm_chain = LLMChain(prompt=prompt, llm=llm)
