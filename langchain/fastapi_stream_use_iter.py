@@ -34,6 +34,17 @@ async def send_message(message: str) -> AsyncIterable[str]:
         callbacks=[callback],
     )
 
+    # model = AzureChatOpenAI(
+    #     openai_api_base=os.environ["AZURE_BASE_URL"],
+    #     openai_api_version=os.environ["AZURE_API_VERSION"],
+    #     deployment_name=os.environ["AZURE_DEPLOYMENT_NAME"],
+    #     openai_api_key=os.environ["AZURE_API_KEY"],
+    #     openai_api_type="azure",
+    #     streaming=True,
+    #     verbose=True,
+    #     callbacks=[callback],
+    # )
+
     async def wrap_done(fn: Awaitable, event: asyncio.Event):
         """Wrap an awaitable with an event to signal when it's done or an exception is raised."""
         try:
